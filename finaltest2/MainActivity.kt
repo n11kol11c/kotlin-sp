@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity() {
         dugme1.setOnClickListener {
             val tekst_iz_polja = unos.text.toString()
 
-            val intent = Intent(this, Class.forName("com.example.finaltest2.DrugaAktivnost"))
+            val intent = Intent(this, DrugaAktivnost::class.java)
+            // Class.forName("com.example.finaltest2.DrugaAktivnost")
             intent.putExtra("IME", tekst_iz_polja)
             startActivity(intent)
         }
